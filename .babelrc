@@ -1,0 +1,11 @@
+{
+  "presets": ["@babel/env"],
+  "plugins": [
+    [
+      "add-header-comment",
+      {
+        "header": ["?src/header.txt"]
+      }
+    ]
+  ]
+}

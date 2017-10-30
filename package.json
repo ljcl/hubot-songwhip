@@ -1,0 +1,43 @@
+{
+  "name": "hubot-songwhip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d dist --ignore **/*.spec.js,__mocks__",
+    "watch": "babel src --watch -d dist --ignore **/*.spec.js,__mocks__",
+    "prepublish": "npm run build",
+    "clean": "del dist",
+    "lint": "eslint src/**/*.js",
+    "test": "jest --coverage",
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljcl/hubot-songwhip.git"
+  },
+  "keywords": ["hubot", "songwhip", "hubot-plugin"],
+  "author": "Luke Clark <luke@lukeclark.com.au>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ljcl/hubot-songwhip/issues"
+  },
+  "homepage": "https://github.com/ljcl/hubot-songwhip#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-add-header-comment": "^1.0.3",
+    "coveralls": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "fetch-mock": "^5.13.1",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
