@@ -1,5 +1,5 @@
 {
-  "presets": ["@babel/env"],
+  "presets": ["env"],
   "plugins": [
     [
       "add-header-comment",
